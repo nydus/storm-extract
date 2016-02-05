@@ -1,0 +1,12 @@
+build/
+*.log
+bin/
+
+# cmake Garbage
+*.cmake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
+# development files
+development/
