@@ -68,21 +68,21 @@ Examples:
 
 
 The library absolutely, unequivocably, could not be possible without
-(ladislav-zezula's CascLib)[https://github.com/ladislav-zezula/CascLib]
-library.  Many thanks to (ladislav-zezula)[https://github.com/ladislav-zezula].
+[ladislav-zezula's CascLib](https://github.com/ladislav-zezula/CascLib)
+library.  Many thanks to [ladislav-zezula](https://github.com/ladislav-zezula).
 
 Most of the program was canibalized from
-(Kanma's CASCExtractor)[https://github.com/Kanma/CASCExtractor/] with the purpose
+[Kanma's CASCExtractor](https://github.com/Kanma/CASCExtractor/) with the purpose
 of customizing it for Heroes of the Storm and integration into
-(NodeJS)[https://www.nodejs.org].
+[NodeJS](https://www.nodejs.org).
 
 
 ## License
 
 **storm-extract** is made available under the MIT License. The text of the license is in
-the file 'LICENSE'.
+the file `LICENSE`.
 
-Under the MIT License you may use storm-extract for any purpose you wish, without warranty,
+Under the MIT License you may use **storm-extract** for any purpose you wish, without warranty,
 and modify it if you require, subject to one condition:
 
 >   "The above copyright notice and this permission notice shall be included in
