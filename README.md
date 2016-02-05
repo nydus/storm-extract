@@ -1,9 +1,10 @@
 # storm-extract
 
 A command-line tool to list and extract files from the Heroes of the Storm CASC
-(Content Addressable Storage Container) files.
+(Content Addressable Storage Container) archives.
 
-Works on MacOS X and Linux.
+Works on MacOS X and Linux.  I have neither the time nor the resources to build
+compile and test on Windows.
 
 
 ## Dependencies
