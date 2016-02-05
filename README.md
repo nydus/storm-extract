@@ -34,33 +34,57 @@ The executable will be put in build/bin/
 ## Usage
 
 ```
-storm-extract
-Usage: bin/storm-extract [options] <CASC_ROOT> <PATTERN>
+storm-extract v0.1.1
+  Usage: storm-extract [options]
 
-This program can list and optionally extract files from a CASC storage container.
+This program can list and optionally extract files from a Heroes of the Storm CASC storage container.
+
+    -h, --help                Display this help
 
 Options:
-    -h, --help                Display this help
-    -v, --verbose             Prints actions taken
-    -p, --pattern <STRING>    Search for filenames matching STRING
+  Common:
+    -i, --in <PATH>           Directory where '/HeroesData' is
+                                (default: '/Applications/Heroes of the Storm')
+    -v, --verbose             Prints more information
+    -q, --quiet               Prints nothing, nada, zip
+    -s, --search <STRING>     Restrict results to full paths matching STRING
+    -f, --filename <STRING>   Search for filenames matching STRING
     -e, --extension <STRING>  Search for filenames having extension STRING
+
+  Search:     storm-extract [options]
+
+  Extract:    storm-extract -x [options]
     -x, --extract             Extract the files found
-    -o, --dest <PATH>         The folder where the files are extracted (extract only)
+    -o, --out <PATH>          The folder where the files are extracted (extract only)
                                 (default: current working directory)
-    -f, --fullpath            During extraction, preserve the path hierarchy found
+    -p, --path                During extraction, preserve the path hierarchy found
                                 inside the storage (extract only)
     -c, --lowercase           Convert extracted file paths to lowercase (extract only)
 
+  Directory:  storm-extract -d [options]
+    -d, --directories         Print all directories found
+
 Examples:
 
-  1) List all files in CASC storage container:
+  1) List all files in CASC storage container (this will take a while):
 
-       ./storm-extract "/Applications/Heroes of the Storm/" /
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -f /
 
   2) Extract a specific file:
 
-       ./storm-extract -o out "/Applications/Heroes of the Storm/" "Path/To/The/File"
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -f "path/to/the/file" -o out
 
+  3) Extract specific filenames:
+
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -f GameData.xml -o out -p -x
+
+  4) Extract all English sounds:
+
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -s enus -o out -e wav -p -x
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -s enus -o out -e ogg -p -x
+
+Copyright(c) 2016 Justin J. Novack
+https://www.github.com/jnovack/storm-extract
 ```
 
 ## Credits

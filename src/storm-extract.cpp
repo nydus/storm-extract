@@ -116,14 +116,17 @@ void showUsage(const std::string &pathToExecutable) {
          << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -f /" << endl
          << endl
          << "  2) Extract a specific file:" << endl
-         // << "       IMPORTANT: The file name must be enclosed in \"\" to prevent the shell to" << endl
-         // << "                  interpret the \\ character as the start of an escape sequence." << endl
          << endl
          << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -f \"path/to/the/file\" -o out" << endl
          << endl
-         // << "  3) Extract some specific files, preserving the path hierarchy:" << endl
-         // << endl
-         // << "       ./storm-extract -f -o out -l listfile-wow6.txt \"/Applications/Heroes of the Storm/\" \"Path\\To\\Extract\\*\"" << endl
+         << "  3) Extract specific filenames (preserving heirarchy):" << endl
+         << endl
+         << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -f GameData.xml -o out -p -x" << endl
+         << endl
+         << "  4) Extract all English sounds (preserving heirarchy):" << endl
+         << endl
+         << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -s enus -o out -e wav -p -x" << endl
+         << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -s enus -o out -e ogg -p -x" << endl
          << endl
          << "Copyright(c) 2016 Justin J. Novack" << endl
          << "https://www.github.com/jnovack/storm-extract" << endl;
