@@ -1,6 +1,7 @@
 build/
 *.log
 bin/
+node_modules/
 
 # cmake Garbage
 *.cmake
@@ -10,3 +11,4 @@ Makefile
 
 # development files
 development/
+out/
