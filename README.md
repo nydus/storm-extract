@@ -80,7 +80,7 @@ Requires <a href="https://www.nodejs.org/>">NodeJS</a> and
 ### Command-Line Application
 
 ```
-storm-extract v1.0.0
+storm-extract v1.0.1
   Usage: storm-extract [options]
 
 This program can list and optionally extract files from a Heroes of the Storm CASC storage container.
@@ -95,7 +95,7 @@ Options:
     -q, --quiet               Prints nothing, nada, zip
     -s, --search <STRING>     Restrict results to full paths matching STRING
     -f, --filename <STRING>   Search for filenames matching STRING
-    -e, --extension <STRING>  Search for filenames having extension STRING
+    -t, --filetype <STRING>   Search for filenames having extension STRING
 
   Search:     storm-extract [options]
 
@@ -103,12 +103,6 @@ Options:
     -x, --extract             Extract the files found
     -o, --out <PATH>          The folder where the files are extracted (extract only)
                                 (default: current working directory)
-    -p, --path                During extraction, preserve the path hierarchy found
-                                inside the storage (extract only)
-    -c, --lowercase           Convert extracted file paths to lowercase (extract only)
-
-  Directory:  storm-extract -d [options]
-    -d, --directories         Print all directories found
 
 Examples:
 
@@ -120,17 +114,16 @@ Examples:
 
        ./storm-extract -i "/Applications/Heroes of the Storm/" -f "path/to/the/file" -o out
 
-  3) Extract specific filenames:
+  3) Extract specific filenames (preserving heirarchy):
 
-       ./storm-extract -i "/Applications/Heroes of the Storm/" -f GameData.xml -o out -p -x
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -f GameData.xml -o out -x
 
-  4) Extract all English sounds:
+  4) Extract all English sounds (preserving heirarchy):
 
-       ./storm-extract -i "/Applications/Heroes of the Storm/" -s enus -o out -e wav -p -x
-       ./storm-extract -i "/Applications/Heroes of the Storm/" -s enus -o out -e ogg -p -x
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -s enus -o out -t wav -x
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -s enus -o out -t ogg -x
 
-Copyright(c) 2016 Justin J. Novack
-https://www.github.com/jnovack/storm-extract
+Copyright(c) 2016 Justin J. Novack <https://www.github.com/nydus/storm-extract>
 ```
 
 ### NodeJS Module

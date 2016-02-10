@@ -26,7 +26,7 @@ using namespace std;
 
 
 // All the global variables
-string version = "1.0.0";
+string version = "1.0.1";
 
 struct tSearchResult {
     string strFileName;
@@ -85,8 +85,8 @@ const CSimpleOpt::SOption COMMAND_LINE_OPTIONS[] = {
     //{ OPT_LOWERCASE,        "--lowercase",      SO_NONE    },
     { OPT_FILEPTRN,         "-f",               SO_REQ_SEP },
     { OPT_FILEPTRN,         "--filename",       SO_REQ_SEP },
-    { OPT_FILEEXT,          "-e",               SO_REQ_SEP },
-    { OPT_FILEEXT,          "--extension",      SO_REQ_SEP },
+    { OPT_FILEEXT,          "-t",               SO_REQ_SEP },
+    { OPT_FILEEXT,          "--filetype",       SO_REQ_SEP },
     { OPT_SEARCH,           "-s",               SO_REQ_SEP },
     { OPT_SEARCH,           "--search",         SO_REQ_SEP },
     // { OPT_LISTDIRS,         "-d",               SO_NONE    },
@@ -114,7 +114,7 @@ void showUsage(const std::string &pathToExecutable) {
          << "    -q, --quiet               Prints nothing, nada, zip" << endl
          << "    -s, --search <STRING>     Restrict results to full paths matching STRING" << endl
          << "    -f, --filename <STRING>   Search for filenames matching STRING" << endl
-         << "    -e, --extension <STRING>  Search for filenames having extension STRING" << endl
+         << "    -t, --filetype <STRING>   Search for filenames having extension STRING" << endl
          // << "    --exclude <ARG1> <ARGN>   Exclude any number of strings" << endl
          << endl
          << "  Search:     storm-extract [options]" << endl
@@ -444,6 +444,7 @@ int main(int argc, char** argv) {
             return -1;
         }
     }
+
     // Remove trailing slashes at the end of the storage path (CascLib doesn't like that)
     if ((strSource[strSource.size() - 1] == '/') || (strSource[strSource.size() - 1] == '\\'))
         strSource = strSource.substr(0, strSource.size() - 1);
