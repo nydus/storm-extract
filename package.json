@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jnovack/storm-extract.git"
+    "url": "git+https://github.com/nydus/storm-extract.git"
   },
   "author": "",
   "license": "ISC",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/jnovack/storm-extract/issues"
+    "url": "https://github.com/nydus/storm-extract/issues"
   },
-  "homepage": "https://github.com/jnovack/storm-extract/"
+  "homepage": "https://github.com/nydus/storm-extract/"
 }

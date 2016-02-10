@@ -149,7 +149,7 @@ void showUsage(const std::string &pathToExecutable) {
          << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -s enus -o out -e wav -x" << endl
          << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -s enus -o out -e ogg -x" << endl
          << endl
-         << "Copyright(c) 2016 Justin J. Novack <https://www.github.com/jnovack/storm-extract>" << endl;
+         << "Copyright(c) 2016 Justin J. Novack <https://www.github.com/nydus/storm-extract>" << endl;
 }
 
 // Overloaded echo command.
