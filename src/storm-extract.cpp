@@ -514,8 +514,15 @@ int main(int argc, char** argv) {
 }
 
 #if NODE
+/************************************/
 /*******  NodeJS Functions  *********/
-/* Get version */
+/************************************/
+
+/* Get version
+ *
+ * Get the version of the application based on hard-coded value above.
+ * @return (string) Version
+ */
 void nodeGetVersion(const Nan:FunctionCallBackInfo<v8::Value> &args) {
     args.GetReturnValue().Set(version);
     return;
