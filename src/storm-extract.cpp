@@ -523,8 +523,16 @@ int main(int argc, char** argv) {
  * Get the version of the application based on hard-coded value above.
  * @return (string) Version
  */
-void nodeGetVersion(const Nan:FunctionCallBackInfo<v8::Value> &args) {
-    args.GetReturnValue().Set(version);
+void nodeGetVersion(const Nan::FunctionCallbackInfo<v8::Value> &args) {
+    // Allocate a new scope when we create v8 JavaScript objects.
+    v8::Isolate *isolate = args.GetIsolate();
+    Nan::HandleScope scope;
+
+    // Convert to v8 String
+    v8::Handle<v8::String> result = v8::String::NewFromUtf8(isolate, version.c_str());
+
+    // Ship it out...
+    args.GetReturnValue().Set(result);
     return;
 }
 
