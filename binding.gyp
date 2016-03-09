@@ -10,7 +10,7 @@
             'CascLib/src/'
         ]
       , 'dependencies': [
-            '<(module_root_dir)/CascLib.gyp:CascLib'
+            '<(module_root_dir)/CascLib.gypi:CascLib'
         ]
       , 'sources': [
             'src/storm-extract.cpp'
