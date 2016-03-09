@@ -26,7 +26,7 @@ using namespace std;
 
 
 // All the global variables
-string version = "1.0.1";
+string version = "1.0.2";
 
 struct tSearchResult {
     string strFileName;
