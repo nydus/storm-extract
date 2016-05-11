@@ -108,7 +108,7 @@ Examples:
 
   1) List all files in CASC storage container (this will take a while):
 
-       ./storm-extract -i "/Applications/Heroes of the Storm/" -f /
+       ./storm-extract -i "/Applications/Heroes of the Storm/" -f .
 
   2) Extract a specific file:
 
