@@ -114,7 +114,7 @@ void showUsage(const std::string &pathToExecutable) {
          << endl
          << "  1) List all files in CASC storage container (this will take a while):" << endl
          << endl
-         << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -f /" << endl
+         << "       ./storm-extract -i \"/Applications/Heroes of the Storm/\" -f ." << endl
          << endl
          << "  2) Extract a specific file:" << endl
          << endl
