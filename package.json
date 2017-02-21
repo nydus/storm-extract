@@ -1,6 +1,6 @@
 {
   "name": "storm-extract",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A command-line tool to list and extract files from the Heroes of the Storm CASC (Content Addressable Storage Container) archives.",
   "main": "index.js",
   "dependencies": {

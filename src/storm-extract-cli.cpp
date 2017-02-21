@@ -20,7 +20,7 @@
 
 using namespace std;
 
-string version = "0.1.1";
+string version = "1.0.3";
 
 struct tSearchResult {
     string strFileName;
